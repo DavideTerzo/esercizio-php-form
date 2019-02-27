@@ -1,4 +1,13 @@
 
+<?php
+    
+     $nome = (isset($_POST['Nome'])) ?
+   $_POST['Nome'] : '';
+     print $nome;
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,28 +18,29 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title></title>
+    <title>Sass</title>
   </head>
   <body>
     <div class="container">
-	 <form>
+	 <form action="index.php" method="post">
 
 	   <div class="form-group">
 	     <label for="Nome">Nome</label>
-	     <input type="text" class="form-control" id="Nome" placeholder="Inserisci il tuo nome">
+	     <input type="text" name="Nome" class="form-control" id="Nome" placeholder="Inserisci il tuo nome">
 	   </div>
 
 	    <div class="form-group">
 	     <label for="Cognome">Cognome</label>
-	     <input type="text" class="form-control" id="Cognome" placeholder="Inserisci il tuo cognome">
+	     <input type="text" name="Cognome" class="form-control" id="Cognome" placeholder="Inserisci il tuo cognome">
 	   </div>
 
 	   <div class="form-group">
 	     <label for="Indirizzo">Indirizzo</label>
-	     <textarea class="form-control" id="Indirizzo" rows="1"></textarea>
+	     <textarea name="Indirizzo" class="form-control" id="Indirizzo" placeholder="Inserisci anche cap. e provincia" rows="3"></textarea>
+	     <small id="emailhelp" class="form-text text-muted">Inserire via, numero civico, cap e provincia.</small>
 	   </div>
 
-	   <button type="submit" class="btn btn-primary">Submit</button>
+	   <button type="submit" class="btn btn-primary">Entra</button>
 
 	 </form>
 	 
