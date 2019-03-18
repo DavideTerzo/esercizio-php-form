@@ -1,9 +1,9 @@
 
 <?php
     
-     $nome = (isset($_POST['Nome'])) ?
-   $_POST['Nome'] : '';
-     print $nome;
+     $nome = (isset($_POST['Nome'])) ? $_POST['Nome'] : '';
+     $cognome = (isset($_POST['cognome'])) ? $_POST['cognome'] : '';
+     $indirizzo = (isset($_POST['indirizzo'])) ? $_POST['indirizzo'] : '';
 
 ?>
 
@@ -18,11 +18,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Sass</title>
+    <title>Salve mondo</title>
   </head>
   <body>
-    <div class="container">
-	 <form action="index.php" method="post">
+   <div class="container">
+	  <form action="index.php" method="post">
 
 	   <div class="form-group">
 	     <label for="Nome">Nome</label>
@@ -41,10 +41,20 @@
 	   </div>
 
 	   <button type="submit" class="btn btn-primary">Entra</button>
+    
+     <div class="container">
+       <div class="alert alert-primary" role="alert">
+         <?php
+           print $nome . '<br>';
+           print $cognome . '<br>';
+           print $indirizzo . '<br>';
+         ?>
+       </div>
+     </div>
 
-	 </form>
-	 
-	</div>
+	  </form>
+	 </div>
+  </body>
 
 
     <!-- Optional JavaScript -->
